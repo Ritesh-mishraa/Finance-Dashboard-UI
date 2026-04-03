@@ -13,8 +13,9 @@ import {
 } from 'lucide-react';
 import { useFinance } from '../context/FinanceContext';
 
-const SidebarItem = ({ icon: Icon, label, isActive }) => (
+const SidebarItem = ({ icon: Icon, label, isActive, onClick }) => (
   <button 
+    onClick={onClick}
     className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors ${
       isActive 
         ? 'bg-blue-600 text-white shadow-md shadow-blue-500/20' 
@@ -26,9 +27,14 @@ const SidebarItem = ({ icon: Icon, label, isActive }) => (
   </button>
 );
 
-const Layout = ({ children }) => {
+const Layout = ({ children, activeTab, setActiveTab }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const { darkMode, toggleDarkMode, role, toggleRole } = useFinance();
+
+  const handleNav = (tab) => {
+    setActiveTab(tab);
+    setSidebarOpen(false);
+  };
 
   return (
     <div className="flex h-screen bg-gray-50 dark:bg-gray-900 overflow-hidden transition-colors duration-200">
@@ -56,9 +62,9 @@ const Layout = ({ children }) => {
         </div>
 
         <nav className="p-4 space-y-2 mt-4">
-          <SidebarItem icon={LayoutDashboard} label="Overview" isActive={true} />
-          <SidebarItem icon={ArrowRightLeft} label="Transactions" />
-          <SidebarItem icon={PieChart} label="Insights" />
+          <SidebarItem icon={LayoutDashboard} label="Overview" isActive={activeTab === 'Overview'} onClick={() => handleNav('Overview')} />
+          <SidebarItem icon={ArrowRightLeft} label="Transactions" isActive={activeTab === 'Transactions'} onClick={() => handleNav('Transactions')} />
+          <SidebarItem icon={PieChart} label="Insights" isActive={activeTab === 'Insights'} onClick={() => handleNav('Insights')} />
           <div className="pt-4 mt-4 border-t border-gray-200 dark:border-gray-800">
             <SidebarItem icon={Settings} label="Settings" />
           </div>

@@ -1,19 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Layout from './components/Layout'
+import Overview from './components/Overview'
 
 function App() {
+  const [activeTab, setActiveTab] = useState('Overview');
+
+  const renderContent = () => {
+    switch (activeTab) {
+      case 'Overview':
+        return <Overview />;
+      case 'Transactions':
+        return <div className="p-6 text-gray-500">Transactions Section (Phase 4)</div>;
+      case 'Insights':
+        return <div className="p-6 text-gray-500">Insights Section (Phase 5)</div>;
+      default:
+        return <Overview />;
+    }
+  };
+
   return (
-    <Layout>
-      <div className="p-6">
-        <h1 className="text-2xl font-bold text-gray-800 dark:text-white">
-          Dashboard Overview
-        </h1>
-        <p className="text-gray-600 dark:text-gray-400 mt-2">
-          Welcome to Phase 1 Initialization! The foundation is set.
-        </p>
-      </div>
+    <Layout activeTab={activeTab} setActiveTab={setActiveTab}>
+      {renderContent()}
     </Layout>
   )
 }
 
 export default App
+

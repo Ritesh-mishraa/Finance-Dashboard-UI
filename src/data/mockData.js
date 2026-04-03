@@ -2,7 +2,7 @@ export const initialTransactions = [
   {
     id: '1',
     date: '2023-10-01',
-    amount: 5000,
+    amount: 150000,
     category: 'Salary',
     type: 'income',
     description: 'Monthly Salary'
@@ -10,7 +10,7 @@ export const initialTransactions = [
   {
     id: '2',
     date: '2023-10-02',
-    amount: 1500,
+    amount: 35000,
     category: 'Housing',
     type: 'expense',
     description: 'Rent Payment'
@@ -18,7 +18,7 @@ export const initialTransactions = [
   {
     id: '3',
     date: '2023-10-05',
-    amount: 120,
+    amount: 8500,
     category: 'Groceries',
     type: 'expense',
     description: 'Supermarket'
@@ -26,7 +26,7 @@ export const initialTransactions = [
   {
     id: '4',
     date: '2023-10-08',
-    amount: 60,
+    amount: 3500,
     category: 'Transportation',
     type: 'expense',
     description: 'Gas Station'
@@ -34,7 +34,7 @@ export const initialTransactions = [
   {
     id: '5',
     date: '2023-10-12',
-    amount: 200,
+    amount: 5000,
     category: 'Entertainment',
     type: 'expense',
     description: 'Concert Tickets'
@@ -42,7 +42,7 @@ export const initialTransactions = [
   {
     id: '6',
     date: '2023-10-15',
-    amount: 800,
+    amount: 45000,
     category: 'Freelance',
     type: 'income',
     description: 'Web Design Project'
@@ -50,7 +50,7 @@ export const initialTransactions = [
   {
     id: '7',
     date: '2023-10-18',
-    amount: 90,
+    amount: 4000,
     category: 'Utilities',
     type: 'expense',
     description: 'Electric Bill'
@@ -58,7 +58,7 @@ export const initialTransactions = [
   {
     id: '8',
     date: '2023-10-22',
-    amount: 45,
+    amount: 2500,
     category: 'Food',
     type: 'expense',
     description: 'Restaurant'
@@ -66,7 +66,7 @@ export const initialTransactions = [
   {
     id: '9',
     date: '2023-10-25',
-    amount: 300,
+    amount: 12000,
     category: 'Shopping',
     type: 'expense',
     description: 'New Clothes'
@@ -74,7 +74,7 @@ export const initialTransactions = [
   {
     id: '10',
     date: '2023-10-30',
-    amount: 150,
+    amount: 20000,
     category: 'Investments',
     type: 'expense',
     description: 'Index Fund'
