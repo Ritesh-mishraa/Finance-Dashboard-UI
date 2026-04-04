@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Layout from './components/Layout'
 import Overview from './components/Overview'
+import Transactions from './components/Transactions'
 
 function App() {
   const [activeTab, setActiveTab] = useState('Overview');
@@ -10,7 +11,7 @@ function App() {
       case 'Overview':
         return <Overview />;
       case 'Transactions':
-        return <div className="p-6 text-gray-500">Transactions Section (Phase 4)</div>;
+        return <Transactions />;
       case 'Insights':
         return <div className="p-6 text-gray-500">Insights Section (Phase 5)</div>;
       default:
