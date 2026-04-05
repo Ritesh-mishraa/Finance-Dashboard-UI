@@ -3,6 +3,7 @@ import Layout from './components/Layout'
 import Overview from './components/Overview'
 import Transactions from './components/Transactions'
 import Insights from './components/Insights'
+import Settings from './components/Settings'
 
 function App() {
   const [activeTab, setActiveTab] = useState('Overview');
@@ -15,6 +16,8 @@ function App() {
         return <Transactions />;
       case 'Insights':
         return <Insights />;
+      case 'Settings':
+        return <Settings />;
       default:
         return <Overview />;
     }

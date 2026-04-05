@@ -66,7 +66,7 @@ const Layout = ({ children, activeTab, setActiveTab }) => {
           <SidebarItem icon={ArrowRightLeft} label="Transactions" isActive={activeTab === 'Transactions'} onClick={() => handleNav('Transactions')} />
           <SidebarItem icon={PieChart} label="Insights" isActive={activeTab === 'Insights'} onClick={() => handleNav('Insights')} />
           <div className="pt-4 mt-4 border-t border-gray-200 dark:border-gray-800">
-            <SidebarItem icon={Settings} label="Settings" />
+            <SidebarItem icon={Settings} label="Settings" isActive={activeTab === 'Settings'} onClick={() => handleNav('Settings')} />
           </div>
         </nav>
       </aside>
